@@ -1,11 +1,11 @@
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from config import  BOT_USERNAME
-from DAXXMUSIC import app as app
+from Jashan import jpyro as pbot
 import requests
 
-@app.on_message(filters.command("write"))
-async def handwrite(_, message: Message):
+@pbot.on_message(filters.command("write"))
+async def hwrite(_, message: Message):
     if message.reply_to_message:
         text = message.reply_to_message.text
     else:
@@ -15,17 +15,10 @@ async def handwrite(_, message: Message):
 
     caption = f"""
 sᴜᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
-✨ ᴡʀɪᴛᴛᴇɴ ʙʏ : [𝐘ᴜᴍɪᴋᴏᴏ](https://t.me/{BOT_USERNAME})
+✨ ᴡʀɪᴛᴛᴇɴ ʙʏ : [Test](https://t.me/{BOT_USERNAME})
 🥀 ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ : {message.from_user.mention}
 """
     await m.delete()
     await message.reply_photo(photo=write,caption=caption)
 
-mod_name = "WʀɪᴛᴇTᴏᴏʟ"
-
-help = """
-
- ᴡʀɪᴛᴇs ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ ᴏɴ ᴡʜɪᴛᴇ ᴘᴀɢᴇ ᴡɪᴛʜ ᴀ ᴘᴇɴ 🖊
-
-❍ /write <ᴛᴇxᴛ> *:* ᴡʀɪᴛᴇs ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ.
- """
+#bkl khud b code kr liya kro agr api ded hojaye toh @fatherOFpaul se contact kre wrna sojaye
