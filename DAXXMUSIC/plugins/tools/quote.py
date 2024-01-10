@@ -1,7 +1,7 @@
 from io import BytesIO
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from DAXXMUSIC import app
+from Jashan import jpyro as pbot
 from httpx import AsyncClient, Timeout
 
 
@@ -249,7 +249,7 @@ def isArgInt(txt) -> list:
         return [False, 0]
 
 
-@app.on_message(filters.command(["q", "r"]) & filters.reply)
+@pbot.on_message(filters.command(["q", "r"]) & filters.reply)
 async def msg_quotly_cmd(self: app, ctx: Message):
     is_reply = False
     if ctx.command[0].endswith("r"):
